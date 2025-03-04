@@ -3,88 +3,32 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="files\style.css">
+    <link rel="stylesheet" href="files\styles\style.css">
+    <link rel="stylesheet" href="files\styles\menuBar.css">
     <title>Test</title>
 </head>
 
-<!-- <style>
-    body {
-        background-color: #292929;
-    }
-    /* html {
-            background: url("images/DiamondTread Rubber Stair Treads Slate Grey 600.jpg");
-            background-position: center;
-            background-size: cover;
-            height: 100%;
-            width: 100%;
-        } */
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #121417;
-    }
-
-    li {
-        float: left;
-        border-right: 1px solid #bbb;
-    }
-
-    li:last-child {
-        border-right: none;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    li a:hover:not(.active) {
-        background-color: #1b1e22;
-    }
-
-    .active {
-        background-color: #4B034F;
-    }
-
-    * {
-        font-family: sans-serif;
-    }
-
-    #settings {
-        display: block;
-        text-align: center
-    }
-
-    #paint {
-        border: 1px solid black;
-        background: #333333;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-</style> -->
-
 <body>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Portfolio</a></li>
-        <li><a class="active" href="test.html">Test Page</a></li>
-        <li style="float:right"><a href="about:blank">About Me</a></li>
+    <!-- Top Menu Bar -->
+    <ul class="menu-bar">
+        <li class="menu-bar"><a href="index.html">Home</a></li>
+        <li class="menu-bar"><a href="projects.html">My Projects</a></li>
+        <li class="menu-bar"><a class="active" href="test.html">Test Page</a></li>
+        <li class="menu-bar about"><a href="about.html">About Me</a></li>
     </ul>
+
     <br>
+
     <marquee>
         <h1>
             <font color="white">This is my test page!</font>
         </h1>
     </marquee>
+
     <br>
+    
     <!-- <iframe height="550" width="450" src="https://bot.dialogflow.com/c07eb843-e7bd-4b3a-b00b-76f84fed426f"></iframe> -->
+    
     <br>
 
     <!-- paint? -->
@@ -107,7 +51,6 @@
         <button onclick="getSize('20');">X Large</button>
     </div>
     <script src="files\scripts\paint.js"></script>
-
 
     <br>
 
@@ -148,8 +91,11 @@
     <br>
 
     <!-- display all images from the files -->
-    <img src="files/images/test.jpg" height="100" </a>
-    <br>
+    <ul>
+        <li><img src="files/images/test.jpg" height="100" </a></li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul> 
     <!-- <img src="images/aprilbackground.jpg" height="100" </a> -->
     <br>
     <br>

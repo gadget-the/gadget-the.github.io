@@ -1,0 +1,32 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #1F1F1F;
+}
+
+/* html {
+    background: url("images/DiamondTread Rubber Stair Treads Slate Grey 600.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+} */
+
+h1 {
+    color: #DAD4D2;
+}
+
+#settings {
+    display: block;
+    text-align: center
+}
+
+#paint {
+    border: 1px solid black;
+    background: #333333;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

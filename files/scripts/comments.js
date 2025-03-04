@@ -8,6 +8,6 @@ function sendComment() {
     
     print("user: " + screenName + " comment: " + commentBox);
 
-    document.getElementById("comments").innerHTML = "Wrong Password";
+    // document.getElementById("comments").innerHTML = "Wrong Password";
     // document.getElementById("demo").innerHTML = "Wrong Password";
 }

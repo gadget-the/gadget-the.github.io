@@ -15,11 +15,7 @@ body {
     width: 100%;
 } */
 
-h1 {
-    color: #DAD4D2;
-}
-
-p {
+h1, h2, h3, p { /* for "or" use ", " */
     color: #DAD4D2;
 }
 

@@ -11,3 +11,7 @@ li.project-list {
     /* padding-bottom: 1; */
     border-bottom: 1px solid #bbb;
 }
+
+li.project-list h2 {
+    padding: 0;
+}

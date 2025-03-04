@@ -4,10 +4,18 @@
 
 function sendComment() {
     var screenName = document.getElementById("screen_name").value;
-    var commentBox = document.getElementById("comment_box").value;
-    
-    print("user: " + screenName + " comment: " + commentBox);
+    var commentText = document.getElementById("comment_box").value;
 
-    // document.getElementById("comments").innerHTML = "Wrong Password";
-    // document.getElementById("demo").innerHTML = "Wrong Password";
+    console.log("user: " + screenName + " comment: " + commentText);
+
+    var commentsListElement = document.getElementById("comments"); // get list element
+    
+    var commentName = document.createElement("dt"); // create list item element
+    var commentContents = document.createElement("dd"); // create list item element
+    
+    commentName.appendChild(document.createTextNode(screenName)); // add text to list item
+    commentContents.appendChild(document.createTextNode(commentText)); // add text to list item
+    
+    commentsListElement.appendChild(commentName); // add list item to list element
+    commentsListElement.appendChild(commentContents); // add list item to list element
 }

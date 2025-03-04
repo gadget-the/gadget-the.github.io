@@ -158,13 +158,23 @@
     <link rel="stylesheet" type="text/css"
         href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
     <script type="text/javascript" id="hcb" src="files\scripts\password.js"></script> -->
-
+    
     <div>
-        <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-        Hey... say something!
-        </textarea>
+        <textarea name="screen_name" id="screen_name" style="font-family:sans-serif;font-size:1.2em;" rows="1" cols="5">name</textarea>
+        <!-- http://www.w3schools.com/TAGs/tag_textarea.asp -->
     </div>
-    <input type="submit" value="Submit">
+    <div>
+        <textarea name="comment" id="comment_box" style="font-family:sans-serif;font-size:1.2em;" rows="3" cols="25">Say something!</textarea>
+    </div>
+    <div>
+        <!-- <input type="submit" value="Submit"> -->
+        <button onclick="sendComment()">Submit</button>
+    </div>
+    <script src="files\scripts\comments.js"></script>
+    <dl id="comments">
+        <dt>Test</dt>
+        <dd>- This is a Test!</dd>
+    </dl>
 
 </body>
 

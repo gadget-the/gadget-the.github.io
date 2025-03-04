@@ -1,5 +1,5 @@
 body {
-    background-color: #292929;
+    background-color: #1F1F1F;
 }
 
 /* html {
@@ -9,6 +9,10 @@ body {
     height: 100%;
     width: 100%;
 } */
+
+h1 {
+    color: white;
+}
 
 ul {
     list-style-type: none;

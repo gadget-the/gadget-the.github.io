@@ -15,3 +15,8 @@ li.project-list {
 li.project-list h2 {
     padding: 0;
 }
+
+li.project-list h2 a:link {
+    padding: 0;
+    color: #DAD4D2;
+}

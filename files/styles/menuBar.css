@@ -11,7 +11,7 @@ li.menu-bar {
     border-right: 1px solid #bbb;
 }
 
-li.menu-bar:last-child {
+li.menu-bar:last-child  {
     border-right: none;
 }
 
@@ -32,6 +32,7 @@ li.menu-bar a:hover:not(.active) {
 }
 
 .menu-bar.about {
-    float:right
+    float:right;
+    border-right: none;
     /* background-color: #4B034F; */
 }

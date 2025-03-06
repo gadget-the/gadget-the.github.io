@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="files\styles\style.css">
     <link rel="stylesheet" href="files\styles\menuBar.css">
+    <link rel="stylesheet" href="files\styles\projects.css">
     <title>Basic Virtual Assistant</title>
 </head>
 
@@ -45,15 +46,42 @@
             When I started reworking the GUI for this version, I decided to use a side menu/tabs style(partly inspired by one of my sketches from the "planning phase" of the whole project).
             The debug menu/section is one thing that stayed throughout the versions. 
         </dd>
+        <br>
         <dt>Voice Input</dt>
         <dd>
             Using Python's <a href="https://pypi.org/project/SpeechRecognition/">SpeechRecognition Library</a>
-            (Also based in part on example code found at: <a href="https://github.com/Uberi/speech_recognition/blob/master/examples/background_listening.py">https://github.com/Uberi/speech_recognition/blob/master/examples/background_listening.py</a>)
+            (Also based in part on example code found at: <a href="https://github.com/Uberi/speech_recognition/blob/master/examples/background_listening.py">https://github.com/Uberi/speech_recognition/blob/master/examples/background_listening.py</a>). I also added the ability for the user to not only use "Wake Words", but add new ones themselves. 
         </dd>
+        <br>
         <dt>Text to Speech</dt>
         <dd>Using <a href="https://pypi.org/project/pyttsx3/">pyttsx3</a>, a Python Text to Speech library</dd>
+        <br>
         <dt>Text to Speech</dt>
         <dd>Using pyttsx3, a Python Text to Speech library https://pypi.org/project/pyttsx3/</dd>
+        <br>
+        <dt>Commands</dt>
+        <dd>
+            <ul>
+                <li>Weather: Things like "How hot is it out there?" and "What's the temperature in Atlanta, Georgia"</li>
+                <li>Smarthouse: Was never actually connected to anything. Just a placeholder for such a system. "turn on the lights in the living room", "open the garage door", "dim the lights to 50%", "Is the garage door open?"</li>
+                <li>Math: "What's the square root of 49", "divide 52 by 8", "How many times does eight go into sixty-four evenly"</li>
+                <li>Web Search: The user also had the option to specify the site use for their search(Google, Bing, Yahoo, Yandex, Baidu, even sites like instagram, spotify, youtube, and amazon). "what is the capital of Russia", "google search what is a pangolin"</li>
+                <li>Define Words: "what does verbatim mean?", "can you tell me what tantamount means?"</li>
+                <li>Open Programs: "", ""</li>
+                <li>Open Websites: I added a lookup file for specific terms, so the user didn't have to say/type out the entire url("google" vs "https://www.google.com/"). The user also has the ability to specify the browser to open the site in.</li>
+                <li>Time Commands: </li>
+                <li>Funfacts</li>
+                <li>Random Number Generators</li>
+                <li>Music Commands</li>
+                <li>Help</li>
+                <li>Conversational</li>
+                <li>Repeat Command/Do That Again</li>
+                <li>Assistant Settings</li>
+                <li>"Repeat That"</li>
+                <li>"Simon Says"/"Repeat After Me"</li>
+            </ul>
+        </dd>
+        <br>
         <dt>Key Binds</dt>
         <dd>
             <ul>
@@ -68,7 +96,7 @@
 
     <h2>Project Images</h2>
     <dl>
-        <dt><h1>Version 4</h1></dt>
+        <dt><h2>Version 4</h2></dt>
         <dd>
             <ul style="list-style-type: none;">
                 <li><img src="files\images\Basic Virtual Assistant Project\Screenshot 2025-03-04 141629.png" height="500"></li>
@@ -81,14 +109,14 @@
                 <li><img src="files\images\Basic Virtual Assistant Project\v4\volume-input.png" height="400"></li>
             </ul>
         </dd>
-        <dt><h1>Version 3</h1></dt>
+        <dt><h2>Version 3</h2></dt>
         <dd>
             <ul  style="list-style-type: none;">
                 <li><img src="files\images\Basic Virtual Assistant Project\v3\ui-version3.png" height="300"></li>
                 <li><img src="files\images\Basic Virtual Assistant Project\v3\ui-version3-debug-menu.png" height="300"></li>
             </ul>
         </dd>
-        <dt><h1>Version 2(The First Version with a GUI)</h1></dt>
+        <dt><h2>Version 2(The First Version with a GUI)</h2></dt>
         <dd>
             <img src="files\images\Basic Virtual Assistant Project\ui-version2.png" height="300"></li>
         </dd>

@@ -1,8 +1,16 @@
-var fs = require('fs');
-var files = fs.readdirSync('files\\images');
+var directory = 'files\images';
+var xmlHttp = new XMLHttpRequest();
+
+xmlHttp.open('GET', directory, false); // false for synchronous request
+xmlHttp.send(null);
+
+var ret = xmlHttp.responseText;
+var fileList = ret.split('\n');
 
 function loadAllImages() {
-    console.log("Test" + files);
+    for (let i = 0; i < fileList.length; i++) {
+        console.log(fileList[i]);
+    }
 }
 
 // window.onload = loadAllImages;

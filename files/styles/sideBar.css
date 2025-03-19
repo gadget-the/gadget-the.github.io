@@ -1,0 +1,61 @@
+ /* { shift everything right some amount to account for the sidebar
+    margin-left: 24px;
+} */
+
+ul.side-bar {
+    /*fixed or absolute?*/
+    position: fixed; /*https://stackoverflow.com/questions/712689/css-div-stretch-100-page-height - fill page/full height - part 1*/
+    
+    display: flex; /*https://stackoverflow.com/questions/45451748/align-li-inside-ul-to-the-bottom*/
+    flex-direction: column;
+    float: left;
+    
+    /* fill page/full height - part 2*/
+    /* height: 95%; */
+    height: 98%;
+    margin: 0;
+    padding: 0;
+
+    /* text formatting */
+    list-style-type: none;
+    overflow: hidden;
+    border-right: none;
+    text-align: center;
+    color: #EDEAE9;
+
+    border-radius: 10px;
+
+    background-color: #121417;
+}
+
+
+li.side-bar {
+    border-bottom: 1px solid #2a3137;
+}
+
+/* 
+li.side-bar:last-child  {
+    
+} */
+
+li.side-bar a {
+    display: block;
+    color: #EDEAE9;
+    padding: 14px 14px; /*top left bottom right*/
+    text-decoration: none;
+}
+
+li.side-bar a:hover:not(.active) {
+    background-color: #1b1e22;
+}
+
+.active {
+    background-color: #4B034F;
+}
+
+.side-bar.about {
+    border-top: 1px solid #2a3137;
+    border-bottom: none;
+    margin-top: auto; /* last item(link to about page) at the very bottom */
+    /* background-color: #4B034F; */
+}

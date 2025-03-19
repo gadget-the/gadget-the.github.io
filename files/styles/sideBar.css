@@ -1,6 +1,7 @@
- /* { shift everything right some amount to account for the sidebar
-    margin-left: 24px;
-} */
+body > *:not(.side-bar *, .center) { /* shift everything right some amount to account for the sidebar; "every direct descendent of the body that isn't part of the side-bar class or a descendent of an element with the side-bar class" */
+    /* margin-left: 20%; */
+    margin-left: 150px;
+}
 
 ul.side-bar {
     /*fixed or absolute?*/
@@ -11,8 +12,7 @@ ul.side-bar {
     float: left;
     
     /* fill page/full height - part 2*/
-    /* height: 95%; */
-    height: 98%;
+    height: 95%;
     margin: 0;
     padding: 0;
 

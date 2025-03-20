@@ -37,3 +37,7 @@ h1, h2, h3, p, ul { /* for "or" use ", " */
     margin-right: auto;
     text-align: center;
 }
+
+.easy-new-line {
+    white-space: pre-line;
+}

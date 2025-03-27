@@ -1,4 +1,4 @@
-body > *:not(.side-bar *, .center) { /* shift everything right some amount to account for the sidebar; "every direct descendent of the body that isn't part of the side-bar class or a descendent of an element with the side-bar class" */
+body > *:not(.side-bar *, .center, .menu-bar) { /* shift everything right some amount to account for the sidebar; "every direct descendent of the body that isn't part of the side-bar class or a descendent of an element with the side-bar class" */
     /* margin-left: 20%; */
     margin-left: 150px;
 }

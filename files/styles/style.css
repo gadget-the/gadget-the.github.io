@@ -3,7 +3,12 @@
     /* color: #DAD4D2; */
 }
 
-h1, h2, h3, p, ul { /* for "or" use ", " */
+h1,
+h2,
+h3,
+p,
+ul {
+    /* for "or" use ", " */
     color: #DAD4D2;
 }
 
@@ -32,7 +37,8 @@ body {
     display: block;
 }
 
-.center { /*https://www.w3schools.com/css/css_align.asp*/
+.center {
+    /*https://www.w3schools.com/css/css_align.asp*/
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -40,4 +46,13 @@ body {
 
 .easy-new-line {
     white-space: pre-line;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 25%;
+    padding: 5px;
 }

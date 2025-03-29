@@ -1,7 +1,7 @@
-var directory = 'files\images';
+var directory = 'files\\images\\';
 var xmlHttp = new XMLHttpRequest();
 
-xmlHttp.open('GET', directory, false); // false for synchronous request
+xmlHttp.open('GET', directory, true); // false for synchronous request
 xmlHttp.send(null);
 
 var ret = xmlHttp.responseText;

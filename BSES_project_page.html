@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="files\styles\style.css">
+    <link rel="stylesheet" href="files\styles\menuBar.css">
+    <link rel="stylesheet" href="files\styles\sideBar.css">
+    <link rel="stylesheet" href="files\styles\projects.css">
+    <title>Basic Search Engine System</title>
+</head>
+
+<body>
+    <!-- Side Bar -->
+    <ul class="side-bar">
+        <li class="side-bar">
+            <a href="index.html">Home</a>
+        </li>
+    
+        <li class="side-bar">
+            <a class="active" href="projects.html">My Projects</a>
+        </li>
+    
+        <li class="side-bar">
+            <a href="test.html">Test Page</a>
+        </li>
+    
+        <li class="side-bar about">
+            <a href="about.html">About Me</a>
+        </li>
+    </ul>
+    
+    <!-- Top Menu Bar -->
+    <ul class="menu-bar" style="margin-left: 125px; margin-right: 10px; border-radius: 10px;">
+        <li class="menu-bar"><a href="BVA_project_page.html">Basic Virtual Assistant</a></li>
+        <li class="menu-bar"><a href="BLG_project_page.html">Basic Landmass Generator</a></li>
+        <li class="menu-bar"><a href="SOCR_project_page.html">Simple Online Chat Room Test</a></li>
+        <li class="menu-bar"><a class="active" href="BSES_project_page.html">Basic Search Engine System</a></li>
+    </ul>
+
+    <h1>Basic Search Engine System(Web Crawling and Indexing Test)</h1>
+    <h2>Language: <em>Python</em></h2>
+    <h2>2020(2021?)</h2>
+
+    <!-- Embed -->
+    <!-- <br>
+    <iframe src="https://d5b096aa-8df1-4f9d-9442-d6a7d0074c52-00-2rflkdtlkqmic.janeway.replit.dev/" width="515px" height="530px"></iframe> -->
+
+    <br>
+
+    <h2>Project Summary</h2>
+    <p class="indent easy-new-line">
+        PROJECT SUMMARY
+    </p>
+
+    <br>
+    <code>
+        #Explanation:
+        #The goal of this code is to take a website and get all of the text within it as well as the links on it that lead to other websites
+        #I wanted to try and make this in an attempt to make a system/method to index websites, essentially making a web crawler type thing
+        #I wanted to try and do this because a while ago I was working on a Virtual Assisstant project and I want it to be able to search things on the internet. As a result I considered making my own search engine, even if it were a basic one.
+        #For this, I decided to store the url, the websites text, and the links to other websites, in a dictionary. I then wanted to save it to a file, so I saved that dictionary in a json file.
+        #I added a function that looks through the json file for a certain url and indexes the url, text, and hyperlinks for all of the sites from it
+        #
+        #After indexing a bunch of websites(storing their url and the text within them), I would have another program(or another function in the same program) that you input a term/keyword/string into and it would check which ones contain that term and return their urls.
+        #
+        #I had a few ideas regarding how to manage/generate the search results. For a very basic system, I can check what websites contain the exact string that was inputed. I could also check for each/every word in the input, splitting the input string up at each space. The result would then be any website that contains every word of the input. Could also check for any word of the input, meaning that the results would be websites that contain any word from the input.
+        #There is also the idea of "adjacent terms" or something like that, where the results are websites that contain the terms specified in the search as well as terms that are similar to those. These "adjacent terms" would be things like synonyms, related topics/terms, and some other things.
+        #I could also have it check for alternate spellings of what was inputed and/or correct any mispelled words
+        #there is apparently an autocorrect library for python: https://stackoverflow.com/questions/13928155/spell-checker-for-python
+        #
+        #I also want the websites in the results to be in order based on how many times the specified term appears in them
+        #I think I figured out how to do that. I find the webpage urls then add them to a dictionary as keys, the values of each being how many times the term(s) appear on them. I then order the dictionary based on the values, turn the ordered dictionary back into a list then return that list.
+        #The first few tries of this idea didn't work.
+        #
+        #Currently, the way it checks if the term(s) appears in the webpage, allows for words that contain the same letters as the specified term(s). For example, mom is in the word moment and test is in the word contested
+        #I could try to fix this, by changing the "text" string into a list of the words on the page. Possibly by splitting it at each space, or utilizing the nltk library to tokenize or chunk the text(I was already considering using it for its "autocorrect"-esque method for fixing mispellings).
+        #
+        #ParseResult(scheme='https', netloc='www.example.com', path='/page.html', params=//, query=//, fragment=//)
+        #scheme://host:port/path?query-string#fragment-id
+        #
+        #I think I got the whole 'ordering results by how many times the specified term appears' kind of working
+        #it does exactly that, but is a little inconsistent(?)
+        #it takes into account text that a normal user wouldn't be able to see when the web page is being displayed for them(things that are in the html of the website, but aren't displayed)
+        #but at least it works better that the other attempts at it
+        #
+        #I had an idea that was reinforced(?).
+        #the idea is that I could have all of the links/urls from the indexed sites added to a list. This list of urls would then be indexed.
+        #This is basically how google does it(https://developers.google.com/search/docs/beginner/how-search-works)
+        #The idea is that you would index a website and add the links to other websites to the big list of website to index. The program would then do the same thing to the other websites in the list.
+        #Of course, the list would keep growing and there would need to be a way to keep track of which ones you've already indexed but, this seems like a really good way to do it.
+        #The one big problem I can see it that it would probably go on for a really long time(Essentially until it can't find any more websites with links to other websites).
+    </code>
+    <br>
+
+    <h2>Project Images</h2>
+    <dl>
+        <dt><h3>Code for Basic Search Engine System V1</h3></dt>
+        <dd>
+            <img src="files\images\Basic Search Engine System(Web Crawling and Indexing Test).png" height="800" title="Screenshot of the Code for Basic Search Engine System V1">
+        </dd>
+
+        <dt><h3>Code for Basic Search Engine System V2</h3></dt>
+        <dd>
+            <img src="files\images\Basic Search Engine Sys(Web Crawling and Indexing Test) V2.png" height="800" title="Screenshot of the Code for Basic Search Engine System V2">
+        </dd>
+    </dl>
+
+    <h2>Links</h2>
+    <ul>
+        <li><a href="https://replit.com/@TheRicks2/Basic-Search-Engine-SystemWeb-Crawling-and-Indexing-Test?v=1#main.py">Link to Replit Page</a></li>
+        <li><a href="https://replit.com/@TheRicks2/Basic-Search-Engine-SysWeb-Crawling-and-Indexing-Test-V2?v=1#main.py">Link to Replit Page(for V2)</a></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="files\styles\style.css">
+    <link rel="stylesheet" href="files\styles\menuBar.css">
+    <link rel="stylesheet" href="files\styles\sideBar.css">
+    <link rel="stylesheet" href="files\styles\projects.css">
+    <title>Android Minecraft Server</title>
+</head>
+
+<body>
+    <!-- Side Bar -->
+    <ul class="side-bar">
+        <li class="side-bar">
+            <a href="index.html">Home</a>
+        </li>
+    
+        <li class="side-bar">
+            <a class="active" href="projects.html">My Projects</a>
+        </li>
+    
+        <li class="side-bar">
+            <a href="test.html">Test Page</a>
+        </li>
+    
+        <li class="side-bar about">
+            <a href="about.html">About Me</a>
+        </li>
+    </ul>
+    
+    <!-- Top Menu Bar -->
+    <ul class="menu-bar" style="margin-left: 125px; margin-right: 10px; border-radius: 10px;">
+        <li class="menu-bar"><a href="BVA_project_page.html">Basic Virtual Assistant</a></li>
+        <li class="menu-bar"><a href="BLG_project_page.html">Basic Landmass Generator</a></li>
+        <li class="menu-bar"><a href="SOCR_project_page.html">Simple Online Chat Room Test</a></li>
+        <li class="menu-bar"><a href="BSES_project_page.html">Basic Search Engine System</a></li>
+        <li class="menu-bar"><a class="active" href="AMS_project.html">Android Minecraft Server</a></li>
+    </ul>
+
+    <h1>Running a Minecraft Server on An Android Device</h1>
+    <h2>Platforms: Android, Ubuntu</h2>
+    <h2>2024</h2>
+    <br>
+
+    <h2>Project Summary</h2>
+    <p class="indent easy-new-line">
+        PROJECT SUMMARY
+    </p>
+
+    <br>
+    <h2>Steps for Vanilla Server</h2>
+    <dl>
+        <dt>ubuntu on android</dt>
+        <dd>
+            <ol>
+                <li>install termux - https://f-droid.org/en/packages/com.termux/</li>
+                <li>install anlinux - https://play.google.com/store/apps/details?id=exa.lnx.a</li>
+                <li>open anlinux</li>
+                <li>tap dashboard</li>
+                <li>choose ubuntu</li>
+                <li>copy code</li>
+                <li>launch termux</li>
+                <li>paste and run command/code to install ubuntu</li>
+                <li>launch ubuntu  "./start-ubuntu.sh"</li>
+            </ol>
+        </dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+    
+    <p class="easy-new-line">
+        ubuntu on android
+        - install termux - https://f-droid.org/en/packages/com.termux/
+        - install anlinux - https://play.google.com/store/apps/details?id=exa.lnx.a
+        - open anlinux
+        - tap dashboard
+        - choose ubuntu
+        - copy code
+        - launch termux
+        - paste and run command/code to install ubuntu
+        - launch ubuntu  "./start-ubuntu.sh"
+
+        extra things to install/do
+        - "apt upgrade"
+        - "apt install sudo"(after "apt update")
+
+        install java/jdk("apt-get install software-properties-common" and "add-apt-repository ppa:openjdk-r/ppa" don't work. don't use openjdk-8-jre, openjdk-17-jre, openjdk-18-jre, etc; they don't work. use most recent that will install, i think it's 21 now)
+        - "sudo apt update"
+        - check if java is already installed "java -version"
+        - "sudo apt install default-jre"
+        - "sudo apt install default-jdk"
+        - "apt-get install openjdk-21-jre"
+        - "java -version" and "javac -version" to check if installed
+
+        - "apt-cache search openjdk"
+
+        server(can use different server options)
+        - "wget -O minecraft_server.jar <download link for server jar file>"
+        - spigot: "wget -O minecraft_server.jar https://download.getbukkit.org/spigot/spigot-1.20.6.jar"
+        - paperMC: "wget -O minecraft_server.jar https://api.papermc.io/v2/projects/paper/versions/1.20.4/builds/496/downloads/paper-1.20.4-496.jar"
+        - minecraft itself?: "wget -O minecraft_server.jar https://launcher.mojang.com/v1/objects/3dc3d84a581f14691199cf6831b71ed1296a9fdf/server.jar"
+        - "chmod +x minecraft_server.jar"
+        - run the server "java -Xmx2G -Xms2G -jar minecraft_server.jar nogui" or "java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui"
+        - "java -jar Xmx3G server.jar"??
+        - "java -Xmx2G -Xms2G -jar minecraft_server.jar nogui"
+        - "java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui"
+        - server won't start until you agree to the EULA
+        - "apt-get install nano"
+        - edit eula file "nano eula.txt"
+        - change false to true
+
+        server setup
+        - "nano eula.txt"
+        - "nano server.properties"
+
+        open server to public(Ngrok for Linux/ARM64;https://ngrok.com/download)(zip/unzip, jar, and fastjar don't work. it's a tgz file, use tar)
+        - open second termux session
+        - download ngrok(as zip/tgz file) "wget -O ngrok.zip <latest ngrok download>"
+        - "wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz"
+        - unzip the file "tar -xvzf ngrok.zip"
+        - sign up for ngrok and get authtoken
+        - save authtoken in ngrok "./ngrok authtoken <authtoken>"
+        - start ngrok/open server to public "./ngrok tcp 25565"
+        - get forward address; will look something like this "tcp://0.tcp.us-cal-1.ngrok.io:18829", only copy "0.tcp.us-cal-1.ngrok.io:18829"
+
+        future start up
+        - start ubuntu "./start-ubuntu.sh"
+        - start server "java -Xmx2G -Xms2G -jar minecraft_server.jar nogui"
+        - start ngrok "./ngrok tcp 25565"
+    </p>
+
+    <br>
+    <h2>Steps for Modded Server</h2>
+    <p class="easy-new-line">
+        ubuntu on android
+        - install termux - https://f-droid.org/en/packages/com.termux/
+        - install anlinux - https://play.google.com/store/apps/details?id=exa.lnx.a
+        - open anlinux
+        - tap dashboard
+        - choose ubuntu
+        - copy code
+        - launch termux
+        - paste and run command/code to install ubuntu
+        - launch ubuntu  "./start-ubuntu.sh"
+
+        extra things to install/do
+        - "apt install sudo"(after "apt update")
+        - "sudo apt-get update"
+        - "apt-get install nano"
+
+        install java/jdk("apt-get install software-properties-common" and "add-apt-repository ppa:openjdk-r/ppa" don't work. don't use openjdk-8-jre, openjdk-17-jre, openjdk-18-jre, etc; they don't work. use most recent that will install, i think it's 21 now)
+        - find latest version of java: "apt-cache search openjdk"
+        - "sudo apt-get install <latest version of java>"
+        - as of now: "sudo apt-get install openjdk-21-jre"
+        - "sudo apt-get install openjdk-21-jdk" ?
+        - "java -version" to check if installed
+
+        server(can use different server options)
+        - copy download link for chosen version: https://files.minecraftforge.net/net/minecraftforge/forge/
+        - "wget -O forge_server.jar <download link>"
+        - "wget -O forge_server.jar https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-installer.jar"
+        - "java -jar forge_server.jar --installServer"
+        - "./run.sh" to run
+        - optionally, you can set min/max memory
+        - "nano user_jvm_args.txt"
+        - uncomment last line
+        - server won't start until you agree to the EULA
+        - edit eula file "nano eula.txt"
+        - change false to true
+
+
+        - "java -jar forge_server.jar --help"
+        - "cat user_jvm_args.txt"
+
+
+        open server to public(Ngrok for Linux/ARM64;https://ngrok.com/download)(zip/unzip, jar, and fastjar don't work. it's a tgz file, use tar)
+        - open second termux session
+        - start ubuntu again "./start-ubuntu.sh"
+        - download ngrok(as zip/tgz file) "wget -O ngrok.zip <latest ngrok download>"
+        - "wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz"
+        - unzip the file "tar -xvzf ngrok.zip"
+        - sign up for ngrok and get authtoken
+        - save authtoken in ngrok "./ngrok authtoken <authtoken>"
+        - "./ngrok authtoken 2gfoW8D1SeiM7DrBOTJlbsyfKuR_7YeHd9m5zHRe4AvrdF4G9"
+        - start ngrok/open server to public "./ngrok tcp 25565"
+        - get forward address; will look something like this "tcp://0.tcp.us-cal-1.ngrok.io:18829", only copy "0.tcp.us-cal-1.ngrok.io:18829"
+
+        adding mod from pc(could probably put them in a zip file, and unzip in mods)
+        - on pc with the mods downloaded, open cmd prompt
+        - check if python is installed on pc, if not, get it(Microsoft store automatically opens): "python3"
+        - navigate to mod folder/mod files location
+        - "cd curseforge/minecraft/Instances/FarlBurl/mods"
+        - "cd desktop/FarlBurl Mods"
+        - open folder to local server: "python3 -m http.server 8000"
+        - grab url for file "<local ip>:port", open in browser
+        - can get local ip with "ipconfig", the IPv4 Address
+        - "http://192.168.4.94:8000/"
+        - copy download link for mod file(s)
+        - on ubuntu, navigate to mods folder: "cd mods"
+        - download file(s) "wget <download link>"
+
+        changing the world(get world folder, do the same steps as the mods for transfer, swap folders? or change server properties)
+        - 
+
+        future start up
+        - start ubuntu "./start-ubuntu.sh"
+        - start server "./run.sh"
+        - start ngrok "./ngrok tcp 25565"
+    </p>
+
+    <h2>Project Images</h2>
+    <dl>
+        <dt><h3>IMAGE TITLE</h3></dt>
+        <dd>
+            <img src="files\images\test.jpg" height="300" title="IMAGE TITLE">
+        </dd>
+    </dl>
+
+    <h2>Sources:</h2>
+    <ul>
+        <li><a href="https://github.com/termux/termux-app?tab=readme-ov-file#installation">https://github.com/termux/termux-app?tab=readme-ov-file#installation</a></li>
+        <li><a href="https://f-droid.org/en/packages/com.termux/">https://f-droid.org/en/packages/com.termux/</a></li>
+        <li><a href="https://www.reddit.com/r/Android/comments/czau7s/hosting_a_minecraft_server_on_android/">https://www.reddit.com/r/Android/comments/czau7s/hosting_a_minecraft_server_on_android/</a></li>
+        <li><a href="https://exposureee.in/how-to-host-a-minecraft-server-on-android-termux-ngrok/">https://exposureee.in/how-to-host-a-minecraft-server-on-android-termux-ngrok/</a></li>
+        <li><a href="https://www.youtube.com/watch?v=w5vV-z2J3ZI">https://www.youtube.com/watch?v=w5vV-z2J3ZI</a></li>
+        <li><a href="https://beebom.com/how-host-minecraft-server-android/">https://beebom.com/how-host-minecraft-server-android/</a></li>
+        <li><a href="https://dashboard.ngrok.com/get-started/your-authtoken">https://dashboard.ngrok.com/get-started/your-authtoken</a></li>
+        <li><a href="https://papermc.io/downloads/paper">https://papermc.io/downloads/paper</a></li>
+        <li><a href="https://getbukkit.org/download/spigot">https://getbukkit.org/download/spigot</a></li>
+        <li><a href="https://www.minecraft.net/en-us/download/server">https://www.minecraft.net/en-us/download/server</a></li>
+        <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-22-04">https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-22-04</a></li>
+        <li><a href="https://askubuntu.com/questions/499807/how-to-unzip-tgz-file-using-the-terminal">https://askubuntu.com/questions/499807/how-to-unzip-tgz-file-using-the-terminal</a></li>
+        <li><a href="https://ngrok.com/download">https://ngrok.com/download</a></li>
+        <li><a href="https://www.youtube.com/watch?v=GVTj-xZSkZw">https://www.youtube.com/watch?v=GVTj-xZSkZw</a></li>
+
+    </ul>
+    
+    <h2>Additional Sources for the Modded Server Setup:</h2>
+    <ul>
+        <li><a href="https://www.reddit.com/r/Minecraft/comments/3wofx4/how_to_you_add_mods_to_a_server/">https://www.reddit.com/r/Minecraft/comments/3wofx4/how_to_you_add_mods_to_a_server/</a></li>
+        <li><a href="https://files.minecraftforge.net/net/minecraftforge/forge/">https://files.minecraftforge.net/net/minecraftforge/forge/</a></li>
+        <li><a href="https://www.youtube.com/watch?v=QnzOip9TTWE">https://www.youtube.com/watch?v=QnzOip9TTWE</a></li>
+        <li><a href="https://www.reddit.com/r/MinecraftForge/comments/15q6rot/running_forge_1201_server_on_command_line/">https://www.reddit.com/r/MinecraftForge/comments/15q6rot/running_forge_1201_server_on_command_line/</a></li>
+    </ul>
+</body>
+
+</html>
